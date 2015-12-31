@@ -12,7 +12,7 @@ let InputFile = DataTypesTest.Load("data/MSFT.csv")
 let connStr = "User ID=jcasal;Host=localhost;Port=5432;Database=etl;"
 
 [<Literal>]
-let resolutionFolder = @"/Users/jcasal/Code/fscript/packages/Npgsql.2.2.7/lib/net45"
+let resolutionFolder = @"./packages/Npgsql.2.2.7/lib/net45"
         
 type targetSql = SqlDataProvider<Common.DatabaseProviderTypes.POSTGRESQL, connStr, resolutionFolder, UseOptionTypes=true>
 let DbContext = targetSql.GetDataContext()
